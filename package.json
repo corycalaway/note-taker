@@ -1,14 +1,25 @@
 {
-  "name": "note-taker",
+  "name": "Develop",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "main": "index.js",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corycalaway/note-taker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/corycalaway/note-taker/issues"
+  },
+  "homepage": "https://github.com/corycalaway/note-taker#readme"
 }
