@@ -32,22 +32,7 @@ app.use('/', htmlRoutes)
 //     return notes;
 //   }
 
-// post for api notes
-app.post('/api/notes', (req, res) => {
-    // req.body is where our incoming content will be
-    const newNote = req.body
 
-    let notes = JSON.parse(fs.readFileSync('./db/db.json'))
-    
-    console.log(notes)
-    // createNewNote(req.body)
-    notes.push(newNote)
-
-    // req.body.id = notes.length.toString();
-
-    fs.writeFileSync('./db/db.json', JSON.stringify(notes));
-     res.json(notes);
-});
 
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
