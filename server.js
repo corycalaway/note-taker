@@ -13,6 +13,12 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes)
 app.use('/', htmlRoutes)
 
+app.post('/api/notes', (req, res) => {
+    // req.body is where our incoming content will be
+    console.log(req.body);
+    res.json(req.body);
+  });
+
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
 });
