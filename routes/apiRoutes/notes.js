@@ -28,10 +28,10 @@ const { dbInfo } = require('../../db/db.json')
 
 router.get('/notes', (req, res) => {
     let results = dbInfo;
-  console.log('pass')
     res.json(results);
   });
 
+  
 
 
   module.exports = router;
