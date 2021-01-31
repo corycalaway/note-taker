@@ -1,13 +1,13 @@
 const path = require('path');
 const router = require('express').Router();
-const { dbInfo } = require('../../db/db.json')
+const { notesArray } = require('../../db/db.json')
 const fs = require('fs');
 
 // router.get('/notes', (req, res) => {
-//     dbInfo.getNotes().then((notes) => {
+//     notesArray.getNotes().then((notes) => {
 //         return res.json(notes)
 //     })
-//     // res.sendFile(path.join(__dirname, dbInfo));
+//     // res.sendFile(path.join(__dirname, notesArray));
 // });
 
 // router.get('*', (req, res) => {
@@ -26,28 +26,33 @@ const fs = require('fs');
 //     res.json('../../db/db.json')
 
 // });
-const createNewNote = function (body, results) {
+const createNewNote = function (body, notesArray) {
 
   const note = body;
   
-  results.push(note);
+  notesArray.push(note);
+
   fs.writeFileSync(
-    path.join(__dirname, './db/db.json'),
-    JSON.stringify({ results }, null, 2)
+    path.join(__dirname, '../../db/db.json'),
+    JSON.stringify({ notesArray }, null, 2)
   );
+  // fs.writeFileSync(
+  //   path.join(__dirname, './db/db.json'),
+  //   JSON.stringify({ results }, null, 2)
+  // );
   return note;
 
 } 
 
 router.get('/notes', (req, res) => {
-    let results = dbInfo;
+    let results = notesArray;
     res.json(results);
   });
 
 // post for api notes
 router.post('/notes', (req, res) => {
   // req.body is where our incoming content will be
-  const newNote = createNewNote(req.body, dbInfo);
+  const newNote = createNewNote(req.body, notesArray);
 
 
 
@@ -57,14 +62,14 @@ router.post('/notes', (req, res) => {
   
 
 
-  console.log(notes)
+  // console.log(notes)
   // createNewNote(req.body)
-  notes.push(newNote)
+  // notesArray.push(newNote)
 
   // req.body.id = notes.length.toString();
 
-  fs.writeFileSync('./db/db.json', JSON.stringify(notes));
-   res.json(notes);
+  // fs.writeFileSync('./db/db.json', JSON.stringify(notesArray));
+  res.json(newNote);
 });
   
 

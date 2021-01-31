@@ -38,7 +38,7 @@ app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
 });
 
-//fs.writeFileySync('db/db.json', JSON.stringify(notes));
+//
 
 // create routes for api and html
 // const newNote = req.body;
