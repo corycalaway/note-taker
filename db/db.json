@@ -1,44 +1,9 @@
 {
   "notesArray": [
     {
-      "title": "Saved Data",
-      "text": "First Note"
-    },
-    {
-      "title": "wadf",
-      "text": "asdgasdg"
-    },
-    {
-      "title": "wadf",
-      "text": "asdgasdg"
-    },
-    {
-      "title": "wadf",
-      "text": "asdgasdg"
-    },
-    {
-      "title": "wadf",
-      "text": "asdgasdg"
-    },
-    {
-      "title": "this ",
-      "text": "is"
-    },
-    {
-      "title": "this ",
-      "text": "is"
-    },
-    {
-      "title": "sa",
-      "text": "dsagasdg"
-    },
-    {
-      "title": "this",
-      "text": "is"
-    },
-    {
-      "title": "a",
-      "text": "real"
+      "title": "test",
+      "text": "this",
+      "noteID": "0a235570-6493-11eb-8854-fea67ba01ae6"
     }
   ]
 }

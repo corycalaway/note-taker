@@ -2,6 +2,7 @@ const path = require('path');
 const router = require('express').Router();
 const { notesArray } = require('../../db/db.json')
 const fs = require('fs');
+const uuidv1 = require('uuidv1');
 
 // router.get('/notes', (req, res) => {
 //     notesArray.getNotes().then((notes) => {
@@ -29,7 +30,10 @@ const fs = require('fs');
 const createNewNote = function (body, notesArray) {
 
   const note = body;
-  
+  let noteID = uuidv1();
+  console.log(noteID)
+  note.noteID = noteID;
+
   notesArray.push(note);
 
   fs.writeFileSync(
