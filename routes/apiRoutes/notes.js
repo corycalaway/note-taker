@@ -30,10 +30,12 @@ const uuidv1 = require('uuidv1');
 const createNewNote = function (body, notesArray) {
 
   const note = body;
-  let noteID = uuidv1();
-  console.log(noteID)
-  note.noteID = noteID;
 
+  // creates unique id for note
+  let noteID = uuidv1();
+  note.id = noteID;
+
+  // attaches information from note section to other note data
   notesArray.push(note);
 
   fs.writeFileSync(
