@@ -13,35 +13,7 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes)
 app.use('/', htmlRoutes)
 
-
-
-//
-
-// function createNewNote(body, notesArray) {
-//     console.log(body);
-//     const notes = body;
-//     notesArray.push(notes)
-
-//     // false.writeFileSync(
-//     //     path.join(__dirname, './db/db.json'),
-//     //     JSON.stringify({notesArray}, null, 2)
-//     // )
-//     // our function's main code will go here!
-  
-//     // return finished code to post route for response
-//     return notes;
-//   }
-
-
-
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
 });
 
-//
-
-// create routes for api and html
-// const newNote = req.body;
-// notes.push(newNote)
-// fs.writeFileSync('db.db.json', JSON.stringify(notes));
-// res.json(notes;)
