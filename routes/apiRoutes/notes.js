@@ -34,7 +34,7 @@ router.post("/notes", (req, res) => {
 });
 
 // attempt to delete
-router.get("/notes/:id", (req, res) => {
+router.get("/api/notes/:id", (req, res) => {
   res.json(notes[req.params.id]);
 });
 

@@ -64,11 +64,8 @@ const renderActiveNote = () => {
   hide(saveNoteBtn);
 
   if (activeNote.id) {
-    // removing these two lines allows editing but also creates new note when saved.
-    noteTitle.setAttribute('readonly', true);
-    noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
-    noteText.value = activeNote.title;
+    noteText.value = activeNote.text;
   } else {
     noteTitle.value = '';
     noteText.value = '';
