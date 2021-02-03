@@ -78,6 +78,10 @@ router.post('/notes', (req, res) => {
   res.json(newNote);
 });
   
+// attempt to delete
+router.get('/notes/:id', (req,res) => {
 
+  res.json(notes[req.params.id]);
+});
 
   module.exports = router;
